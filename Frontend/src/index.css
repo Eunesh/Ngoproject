@@ -272,3 +272,28 @@ Add the correct display in Chrome and Safari.
 summary {
 	display: list-item;
 }
+
+
+/* width for scrollbar */
+::-webkit-scrollbar {
+	width: 10px;
+  }
+
+  /* Track for scrollbar */
+::-webkit-scrollbar-track {
+	background: var(--clr-light); 
+  }
+   
+
+
+  /* Handle for scrollbar */
+::-webkit-scrollbar-thumb {
+	background: #888; 
+  }
+
+  /* Handle on hover scrollbar */
+::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+  }
+  
+  

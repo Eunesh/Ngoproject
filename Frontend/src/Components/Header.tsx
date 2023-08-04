@@ -2,7 +2,8 @@ import { Match, Switch, createEffect, createSignal } from "solid-js";
 
 import "../Global css/Style.css";
 import "../Global css/util.css";
-import "../Header/Header.css";
+import "./Css/Header.css";
+import { A } from "@solidjs/router";
 
 interface propstype {
   headerTitle1: string;
@@ -82,16 +83,12 @@ const Header = (props: propstype) => {
             <CrossIcon height="0.9em" width="0.9em" />
           </div>
           <div class="Header_section_navbar">
-            <a class="first_header_navbar">
-              {props.headerTitle1}
-              <div class="dropdown_content">
-                <p>hi</p>
-                <p>hello</p>
-              </div>
-            </a>
+            <a class="">{props.headerTitle1}</a>
             <a class="">{props.headerTitle2}</a>
             <a class="">{props.headerTitle3}</a>
-            <a class="">{props.headerTitle4}</a>
+            <a class="" href="/gallery">
+              {props.headerTitle4}
+            </a>
             <a class="">{props.headerTitle5}</a>
           </div>
         </div>
@@ -103,8 +100,26 @@ const Header = (props: propstype) => {
     return (
       <div class="container">
         <div class="Header">
-          <p>Logo</p>
+          <a>Logo</a>
           <HambergurMenuIcon height="1em" width="1em" />
+          <div class="header_content">
+            <a href="/" class="header_title">
+              {props.headerTitle1}
+            </a>
+            <a class="header_title">{props.headerTitle2}</a>
+            <A href="/members" class="header_title">
+              {props.headerTitle3}
+            </A>
+            <A
+              class="header_title"
+              href="/gallery"
+              activeClass="active_header_title"
+              // onClick={Reload}
+            >
+              {props.headerTitle4}
+            </A>
+            <a class="header_title">{props.headerTitle5}</a>
+          </div>
         </div>
       </div>
     );

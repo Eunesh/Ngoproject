@@ -1,0 +1,41 @@
+.card_wrapper{
+    /* margin-left: 10px; */
+    width: 80dvw;
+    height: 65dvh;
+    /* border: 1px ridge var(--clr-dark); */
+    -webkit-box-shadow: 0 4px 6px -6px #222;
+    -moz-box-shadow: 0 4px 6px -6px #222;
+    box-shadow: 5px 4px 6px -2px #222;
+    border-radius: 20px;
+}
+
+
+.card_wrapper:hover{
+    box-shadow: 5px 4px 6px 2px #222;  
+}
+
+.profile_pic{
+    width: 60dvw;
+    height: 60dvh;
+    object-fit: cover;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 200px;
+}
+
+/*  md */
+@media (min-width: 768px) {
+    .card_wrapper{
+    width: 25dvw;
+    height: 65dvh;
+    
+    }
+
+    .profile_pic{
+        width: 20dvw;
+        height: 20dvw;
+    }
+
+    
+    
+}

@@ -1,0 +1,192 @@
+.Header_section_navbar{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100vh;
+    /* border: 1px solid black; */
+    align-items: start;
+    justify-content: start;
+    padding-top: 70px;
+    padding-left: 50px;
+    color: var(--clr-light);
+    
+}
+
+/* 
+.dropdown_content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+} */
+
+
+.background{
+    background-color: #191b26;
+}
+
+.top_header_navbar{
+    color: var(--clr-light);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vh;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    border-bottom: 1px ridge #302e2e ;
+}
+
+.Cross_icon{
+    margin-top: 12px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.Cross_icon:active{
+    background-color: #817e7e;
+    border-radius: 10px;
+}
+
+.Header{
+    display: flex;
+    flex-direction: row;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    height: 12dvh;
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    -webkit-box-shadow: 0 4px 6px -6px #222;
+    -moz-box-shadow: 0 4px 6px -6px #222;
+    box-shadow: 0 4px 6px -6px #222;   
+}
+
+.sticky{
+    position: sticky;
+    top: 10;
+    left: 0;
+    right: 0;
+}
+
+.header_content{
+    display: none;
+}
+
+
+
+
+
+/* .image_Section{
+    background-image: url("../Images/Hero.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 85vh;
+}
+
+.description_section{
+    background-color: var(--clr-light);
+    opacity: 0.6;
+    width: 100%;
+    height: 40vh;
+} */
+
+
+
+
+.activeNav {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 2000;
+    /* transition: .5s ease; */
+    animation-name: navbaranimation;
+    animation-duration: 0.3s;
+ }
+
+ @keyframes navbaranimation {
+    0% { top:500px; }
+    100%{top: 1px;}
+ }
+
+.HamburgerIcon:active{
+    background-color: #817e7e;
+    border-radius: 10px;
+}
+
+.header_title{
+    padding: 10px;
+    text-decoration: none;
+    color: #191b26;
+}
+
+.active_header_title{
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    border-radius: 20px;
+    opacity: 0.7;
+}
+
+
+/*  xl */
+@media (min-width: 1024px) {
+
+    .Header{
+        justify-content: space-between;
+    }
+
+
+    .header_content{
+        display: block;
+        display: flex;
+        flex-direction: row;
+        gap:25px;
+        font-size: 0.9em;
+        font-weight: 400;
+        letter-spacing: 2px;
+    }
+
+    .header_title:hover{
+        /* border: 1px ridge black; */
+        background-color: var(--clr-dark);
+        color: var(--clr-light);
+        border-radius: 20px;
+        cursor: pointer;
+        opacity: 0.7;
+    }
+    
+
+     .HamburgerIcon{
+        display: none;
+     } 
+    
+}
+
+
+/*  lg  */
+/* @media (min-width: 1024px) {
+    .Header{
+        justify-content: space-between;
+    }
+
+    .header_content{
+        display: block;
+        display: flex;
+        flex-direction: row;
+        gap:25px;
+        font-size: 0.9em;
+        font-weight: 400;
+        letter-spacing: 2px;
+    }
+
+    .HamburgerIcon{
+        display: none;
+     } 
+    
+} */

@@ -1,20 +1,26 @@
 import type { Component } from "solid-js";
+import { lazy } from "solid-js";
 import "./Global css/util.css";
-import Header from "./Header/Header";
+// import Homepage from "./Pages/Homepage";
+// import Gallery from "./Components/Gallery";
+import { Router, Route, Routes } from "@solidjs/router";
+// import { Members } from "./Pages/Members";
+
+// for lazy loading
+const Homepage = lazy(() => import("./Pages/Homepage"));
+const Gallery = lazy(() => import("./Pages/Gallery"));
+const Members = lazy(() => import("./Pages/Members"));
 
 const App: Component = () => {
   return (
     <>
-      <Header
-        headerTitle1="home"
-        headerTitle2="members"
-        headerTitle3="About us"
-        headerTitle4="adad"
-        headerTitle5="sadasd"
-      />
-      <div>
-        <h1 class="container">Hi</h1>
-      </div>
+      <Router>
+        <Routes>
+          <Route path="/" component={Homepage} />
+          <Route path="/gallery" component={Gallery} />
+          <Route path="/members" component={Members} />
+        </Routes>
+      </Router>
     </>
   );
 };

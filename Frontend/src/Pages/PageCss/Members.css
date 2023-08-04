@@ -1,0 +1,10 @@
+.members_wrapper{
+    padding-top: 50px;
+    padding-left: 30px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 90px;
+    /* border: 1px solid red;  */
+}
